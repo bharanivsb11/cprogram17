@@ -1,19 +1,19 @@
 #include<stdio.h>
 int main()
 {
-int n,num,digit,reverse=0;
+int n,num,reminder,reverse=0;
 printf("enter the number",n);
 scanf("%d",&n);
 num=n;
 while(n!=0)
 {
-digit=n%10;
+reminder=n%10;
+reverse=reverse*10+reminder;
 n=n/10;
-reverse=reverse*10*digit;
 }
 if(num==reverse)
-printf("yes");
+printf("yes",num);
 else
-printf("no");
+printf("no",num);
 return 0;
 }
